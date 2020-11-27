@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.MainPage">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="3" Grid.Column="0" Clicked="button_Clicked" Text="Nuevo"></Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name ="editar"  Clicked="button_modificar" Text="Modificar" IsVisible="false"></Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name ="eliminar" Clicked="cmdLimpiar" Text="Eliminar" IsVisible="false"></Button>
+        <ListView Grid.Row="4" Grid.ColumnSpan="2" x:Name="lstPersonas" ItemSelected="lstPersonas_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding title}" Detail="{Binding description}"></TextCell>
+                
+              
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.PageEditar">
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Entry Grid.Row="1" Grid.ColumnSpan="2" x:Name="txtNombre" Text ="{Binding Nombre}"></Entry>
+        <Entry Grid.Row="2" Grid.ColumnSpan="2" x:Name="txtCorreo" Text ="{Binding Correo}"></Entry>
+        <Button Grid.Row="3" Grid.ColumnSpan="1" Clicked="Guardar" Text="Guardar" HorizontalOptions="Center"></Button>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Clicked="Cancelar" Text="Cancelar" HorizontalOptions="Center"></Button>
+    </Grid>
+</ContentPage>
